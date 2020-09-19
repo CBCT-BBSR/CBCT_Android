@@ -41,6 +41,7 @@
             android:textColor="#1E88E5"
             android:textSize="20sp" />
         <EditText
+            android:id="@+id/et_student_username"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:inputType="number"
@@ -64,6 +65,7 @@
             android:textColor="#1E88E5"
             android:textSize="20sp" />
         <EditText
+            android:id="@+id/et_student_password"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginStart="25dp"
