@@ -54,7 +54,6 @@ public class StudentLoginActivity extends AppCompatActivity {
 
         String student = mETStudentUsername.getText().toString();
         String password = mEtStudentPassword.getText().toString();
-        long studentId = Long.parseLong(student);
 
         if(student.isEmpty())
         {
@@ -70,6 +69,7 @@ public class StudentLoginActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Pls Try Again",Toast.LENGTH_LONG).show();
             return;
         }
+        long studentId = Long.parseLong(student);
         Call<Studentlogin> call = studentLoginApi.getStudent(studentId,password);
         call.enqueue(new Callback<Studentlogin>() {
             @Override
