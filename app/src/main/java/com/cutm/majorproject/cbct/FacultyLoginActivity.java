@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,8 @@ public class FacultyLoginActivity extends AppCompatActivity {
     private Button mBtnGotoFacultyHomepage;
     private EditText mETFacultyUsername;
     private EditText mEtFacultyPassword;
+    private TextView mTVForgetPassword;
+
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
@@ -30,6 +33,17 @@ public class FacultyLoginActivity extends AppCompatActivity {
         mBtnGotoFacultyHomepage = findViewById(R.id.btn_goto_faculty_homepage);
         mETFacultyUsername = findViewById(R.id.et_faculty_username);
         mEtFacultyPassword = findViewById(R.id.et_faculty_password);
+        mTVForgetPassword = findViewById(R.id.tv_forget_password);
+
+
+
+        mTVForgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FacultyLoginActivity.this,ForgetPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mBtnGotoFacultyHomepage.setOnClickListener(new View.OnClickListener() {
             @Override

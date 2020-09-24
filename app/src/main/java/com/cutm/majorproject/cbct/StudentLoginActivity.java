@@ -5,11 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,7 +20,8 @@ public class StudentLoginActivity extends AppCompatActivity {
 
     private Button mBtnGotoStudentHomepage;
     private EditText mETStudentUsername;
-    private EditText mEtStudentPassword;
+    private EditText mETStudentPassword;
+    private TextView mTVForgetPassword;
 
 
 
@@ -33,7 +33,17 @@ public class StudentLoginActivity extends AppCompatActivity {
 
         mBtnGotoStudentHomepage = findViewById(R.id.btn_goto_student_homepage);
         mETStudentUsername = findViewById(R.id.et_student_username);
-        mEtStudentPassword = findViewById(R.id.et_student_password);
+        mETStudentPassword = findViewById(R.id.et_student_password);
+        mTVForgetPassword = findViewById(R.id.tv_forget_password);
+
+
+        mTVForgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StudentLoginActivity.this,ForgetPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mBtnGotoStudentHomepage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +54,7 @@ public class StudentLoginActivity extends AppCompatActivity {
         });
     }
 
+
     private void getStudent() {
 
             Retrofit retrofit = new Retrofit.Builder ().
@@ -53,7 +64,7 @@ public class StudentLoginActivity extends AppCompatActivity {
             StudentLoginApi studentLoginApi = retrofit.create (StudentLoginApi.class);
 
         String student = mETStudentUsername.getText().toString();
-        String password = mEtStudentPassword.getText().toString();
+        String password = mETStudentPassword.getText().toString();
 
         if(student.isEmpty())
         {
@@ -64,8 +75,8 @@ public class StudentLoginActivity extends AppCompatActivity {
         }
         else if (password.isEmpty())
         {
-            mEtStudentPassword.setError("Field Cannot Be Empty");
-            mEtStudentPassword.requestFocus();
+            mETStudentPassword.setError("Field Cannot Be Empty");
+            mETStudentPassword.requestFocus();
             Toast.makeText(getApplicationContext(),"Pls Try Again",Toast.LENGTH_LONG).show();
             return;
         }
