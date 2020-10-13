@@ -40,7 +40,7 @@ public class FacultyLoginActivity extends AppCompatActivity {
         mTVForgetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FacultyLoginActivity.this,ForgetPasswordActivity.class);
+                Intent intent = new Intent(FacultyLoginActivity.this, FacultyForgetPasswordActivity.class);
                 startActivity(intent);
             }
         });
