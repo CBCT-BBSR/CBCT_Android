@@ -37,7 +37,8 @@ public class StudentLoginActivity extends AppCompatActivity {
         mTVForgetPassword = findViewById(R.id.tv_forget_password);
 
 
-        mTVForgetPassword.setOnClickListener(new View.OnClickListener() {
+        mTVForgetPassword.setOnClickListener(
+                new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(StudentLoginActivity.this, StudentForgetPasswordActivity.class);
@@ -58,7 +59,7 @@ public class StudentLoginActivity extends AppCompatActivity {
     private void getStudent() {
 
             Retrofit retrofit = new Retrofit.Builder ().
-                    baseUrl("http://192.168.42.99:9091/")
+                    baseUrl("http://192.168.43.57:9090/")
                     .addConverterFactory (GsonConverterFactory.create ())
                     .build ();
             StudentLoginApi studentLoginApi = retrofit.create (StudentLoginApi.class);

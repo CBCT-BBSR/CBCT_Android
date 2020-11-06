@@ -18,6 +18,7 @@
         <activity android:name=".StudentHomepageActivity"/>
         <activity android:name=".StudentForgetPasswordActivity"/>
         <activity android:name=".FacultyForgetPasswordActivity"/>
+        <activity android:name=".FacultySearchResult"/>
         <activity android:name=".SplashScreen"
             android:theme="@style/SplashTheme">
             <intent-filter>
