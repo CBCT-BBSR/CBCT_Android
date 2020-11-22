@@ -19,6 +19,9 @@
         <activity android:name=".StudentForgetPasswordActivity"/>
         <activity android:name=".FacultyForgetPasswordActivity"/>
         <activity android:name=".FacultySearchResult"/>
+        <activity android:name=".StudentCgpaActivity"/>
+        <activity android:name=".CGPACalc"/>
+        <activity android:name=".directCgpaCalc"/>
         <activity android:name=".TaskViewActivity"/>
         <activity android:name=".AddTaskActivity"/>
 

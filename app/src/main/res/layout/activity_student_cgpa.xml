@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentCgpaActivity"
+    android:background="@drawable/centre_background"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="end"
+        android:src="@drawable/enquiry_bk" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to CGPA Calculator"
+        android:textColor="#E4E0E0"
+        android:layout_marginTop="25dp"
+        android:textSize="28sp"
+        android:textStyle="italic"
+        android:layout_gravity="center" />
+    <View
+        android:layout_width="360dp"
+        android:layout_height="7dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#D6D60C" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="To calculate CGPA by adding all the courses from first semester"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/cgpaId"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_submit"
+        android:text="Click here"
+        android:textSize="20sp"
+        android:textColor="#E4E005"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:padding="10dp"
+        android:text="To calculate CGPA for current semester"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/directcgpaId"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_submit"
+        android:text="Click here"
+        android:textSize="20sp"
+        android:textColor="#E4E005"
+        android:textStyle="italic"/>
+
+
+
+</LinearLayout>

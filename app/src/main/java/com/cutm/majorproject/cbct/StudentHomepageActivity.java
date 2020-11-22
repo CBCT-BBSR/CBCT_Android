@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class StudentHomepageActivity extends AppCompatActivity {
 
     private ImageView mIVGotoCreditRecord;
+    private ImageView mIVGotoCgpaCalculator;
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
@@ -18,6 +19,9 @@ public class StudentHomepageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student_homepage);
 
         mIVGotoCreditRecord = findViewById(R.id.iv_credit_record);
+        mIVGotoCgpaCalculator = findViewById(R.id.iv_calculator);
+
+        //Go to credit record page----
         mIVGotoCreditRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,5 +29,18 @@ public class StudentHomepageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Go to cgpa calculator-------
+
+        mIVGotoCgpaCalculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(StudentHomepageActivity.this,StudentCgpaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
