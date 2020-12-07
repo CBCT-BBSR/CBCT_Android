@@ -22,6 +22,7 @@ public class FacultyHomepageActivity extends AppCompatActivity {
 
     Button mBtnGotoFacultyFetchDetails;
     EditText mETFacultySearchStudentid;
+    public int count = 0;
 
 
     @Override
@@ -95,5 +96,22 @@ public class FacultyHomepageActivity extends AppCompatActivity {
 
             }
         });
+    }
+    @Override
+    public void onBackPressed()
+    {
+        if(count == 0)
+        {
+            Toast.makeText(FacultyHomepageActivity.this,"Are Sure to Go Back",Toast.LENGTH_LONG).show();
+            count++;
+        }
+        else
+        {
+            Intent intent= new Intent(FacultyHomepageActivity.this, FacultyLoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        // Toast.makeText(StudentHomepageActivity.this,"Are Sure to Go Back",Toast.LENGTH_LONG).show();
+
     }
 }

@@ -2,6 +2,8 @@ package com.cutm.majorproject.cbct;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,7 @@ public class FacultySearchResult extends AppCompatActivity {
     TextView mTVFacultyStudentAcadamicYear;
     TextView mTVFacultyStudentBranch;
     TextView mTVFacultyStudentSchool;
+    Button mBTNFacultyLogout;
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
@@ -34,13 +37,14 @@ public class FacultySearchResult extends AppCompatActivity {
          mTVFacultyStudentAcadamicYear = (TextView) findViewById(R.id.tv_Student_Acadamic_year);
          mTVFacultyStudentBranch = (TextView) findViewById(R.id.tv_Student_Branch);
          mTVFacultyStudentSchool = (TextView) findViewById(R.id.tv_Student_School);
+         mBTNFacultyLogout = (Button) findViewById(R.id.btn_faculty_logout);
 
          getResult();
     }
 
     private void getResult() {
         Retrofit retrofit = new Retrofit.Builder ().
-                baseUrl("http://192.168.43.57:9090/")
+                baseUrl("http://192.168.42.146:9090/")
                 .addConverterFactory (GsonConverterFactory.create ())
                 .build ();
 
@@ -77,6 +81,19 @@ public class FacultySearchResult extends AppCompatActivity {
 
             }
         });
+
+        mBTNFacultyLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent= new Intent(FacultySearchResult.this, FacultyLoginActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+
 
     }
 

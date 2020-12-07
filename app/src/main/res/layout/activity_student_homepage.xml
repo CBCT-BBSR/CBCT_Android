@@ -109,6 +109,16 @@
         android:background="#34A3D5"
         android:textSize="18sp"
         android:textColor="#011681"/>
+    <Button
+        android:id="@+id/btn_student_logout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:background="@drawable/btn_submit"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
 

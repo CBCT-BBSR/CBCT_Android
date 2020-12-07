@@ -59,7 +59,7 @@ public class StudentLoginActivity extends AppCompatActivity {
     private void getStudent() {
 
             Retrofit retrofit = new Retrofit.Builder ().
-                    baseUrl("http://192.168.43.57:9090/")
+                    baseUrl("http://192.168.42.146:9090/")
                     .addConverterFactory (GsonConverterFactory.create ())
                     .build ();
             StudentLoginApi studentLoginApi = retrofit.create (StudentLoginApi.class);
