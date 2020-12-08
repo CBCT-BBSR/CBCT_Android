@@ -79,7 +79,7 @@ public class StudentForgetPasswordActivity extends AppCompatActivity {
 //                String Password = mETStudentForgetPassword.getText().toString();
                 if (message == 1){
                     Intent intent =new Intent(StudentForgetPasswordActivity.this, StudentLoginActivity.class);
-                    Toast.makeText (getApplicationContext (), "New Password Is Ready" +response.code (), Toast.LENGTH_LONG).show ();
+                    Toast.makeText (getApplicationContext (), "New Password Is Ready", Toast.LENGTH_LONG).show ();
                     startActivity(intent);
                 }
                 else{
