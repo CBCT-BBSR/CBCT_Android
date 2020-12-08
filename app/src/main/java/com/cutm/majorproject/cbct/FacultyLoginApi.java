@@ -9,4 +9,6 @@ public interface FacultyLoginApi {
     @GET("/facultylogin/{facultyId}/{password}")
     Call<Facultylogin> getFaculty(@Path("facultyId") Long facultyId, @Path("password") String password);
 
+    @GET("/facultyforgotpassword/{facultyId}/{password}")
+    Call<Integer> FacultyForgotPassword(@Path("facultyId") Long facultyId,@Path("password") String password);
 }

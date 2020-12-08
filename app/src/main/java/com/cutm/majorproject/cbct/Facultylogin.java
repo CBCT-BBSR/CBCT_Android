@@ -4,16 +4,16 @@ public class Facultylogin {
 
 
     private Long facultyID;
-    private String facultyName;
+   // private String facultyName;
     private String password;
 
 
     public Facultylogin() {
     }
 
-    public Facultylogin(Long facultyID, String facultyName, String password) {
+    public Facultylogin(Long facultyID,String password) {
         this.facultyID = facultyID;
-        this.facultyName = facultyName;
+      //  this.facultyName = facultyName;
         this.password = password;
     }
 
@@ -25,13 +25,13 @@ public class Facultylogin {
         this.facultyID = facultyID;
     }
 
-    public String getFacultyName() {
-        return facultyName;
-    }
-
-    public void setFacultyName(String facultyName) {
-        this.facultyName = facultyName;
-    }
+//    public String getFacultyName() {
+//        return facultyName;
+//    }
+//
+//    public void setFacultyName(String facultyName) {
+//        this.facultyName = facultyName;
+//    }
 
     public String getPassword() {
         return password;
