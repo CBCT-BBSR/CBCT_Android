@@ -4,15 +4,15 @@ public class Studentlogin {
 
 
     private Long studentID;
-    private String studentName;
+   // private String studentName;
     private String password;
 
     public Studentlogin() {
     }
 
-    public Studentlogin(Long studentID, String studentName, String password) {
+    public Studentlogin(Long studentID, String password) {
         this.studentID = studentID;
-        this.studentName = studentName;
+       // this.studentName = studentName;
         this.password = password;
     }
 
@@ -24,13 +24,13 @@ public class Studentlogin {
         this.studentID = studentID;
     }
 
-    public String getStudentName() {
-        return studentName;
-    }
-
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
-    }
+//    public String getStudentName() {
+//        return studentName;
+//    }
+//
+//    public void setStudentName(String studentName) {
+//        this.studentName = studentName;
+//    }
 
     public String getPassword() {
         return password;

@@ -11,4 +11,7 @@ public interface StudentLoginApi {
     @GET("/studentlogin/{studentId}/{password}")
     Call<Studentlogin> getStudent(@Path("studentId") Long studentId, @Path("password") String password);
 
+
+    @GET("/studentforgotpassword/{studentId}/{password}")
+    Call<Integer> StudentForgotPassword(@Path("studentId") Long studentId,@Path("password") String password);
 }
